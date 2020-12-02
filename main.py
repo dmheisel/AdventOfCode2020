@@ -6,7 +6,8 @@ from Day2.Pass import Pass
 # report_expenses('Day1\input.txt', 2020, 3)
 
 path = 'Day2\input.txt'
-pass_list = [Pass(limits, letter, pword) for (limits, letter, pword) in parse_input(path)]
+pass_list = parse_input(path)
 pass_count = [password.validate_count() for password in pass_list].count(True)
 pass_count_revised = [password.validate_position() for password in pass_list].count(True)
+print(pass_count)
 print(pass_count_revised)
