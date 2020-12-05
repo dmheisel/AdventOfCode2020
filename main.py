@@ -18,6 +18,6 @@ from Day4.passport_validator import validate_all, parse_input
 # calculate_trajectory(path, [(3, 1)])
 # calculate_trajectory(path, [(1,1), (3,1), (5,1), (7,1), (1,2)])
 
-path = 'Day4\input.txt'
+path = 'Day4/input.txt'
 valid = validate_all(path)
 print(valid)

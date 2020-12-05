@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 advent/
+input.txt
 .Python
 build/
 develop-eggs/

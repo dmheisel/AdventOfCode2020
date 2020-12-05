@@ -1,38 +1,9 @@
-# --- Day 1: Report Repair ---
+# Day 1
 
-After saving Christmas five years in a row, you've decided to take a vacation at a nice resort on a tropical island. Surely, Christmas will go on without you.
+This could have been a pretty simple loop through for both challenges, but I wanted to give myself a little bit of exercise with recursion.
 
-The tropical island has its own currency and is entirely cash-only. The gold coins used there have a little picture of a starfish; the locals just call them stars. None of the currency exchanges seem to have heard of them, but somehow, you'll need to find fifty of these coins by the time you arrive so you can pay the deposit on your room.
+Oh, and I've got a very basic function set up to convert the input text file into an array of numbers, saved in the utils folder so I can just call it like this
 
-To save your vacation, you need to get all fifty stars by December 25th.
+So in the find_sum function, there's some recursion.  This threw me for a loop for a bit -- I'm not as familiar/used to writing recusion so it was a little bit of a headache remembering how it would need to look to work, but I got there in the end.
 
-Collect stars by solving puzzles. Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first. Each puzzle grants one star. Good luck!
-
-Before you leave, the Elves in accounting just need you to fix your expense report (your puzzle input); apparently, something isn't quite adding up.
-
-Specifically, they need you to find the two entries that sum to 2020 and then multiply those two numbers together.
-
-For example, suppose your expense report contained the following:
-
-```
-1721
-979
-366
-299
-675
-1456
-```
-
-In this list, the two entries that sum to 2020 are `1721` and `299`. Multiplying them together produces `1721 * 299 = 514579`, so the correct answer is `514579`.
-
-Of course, your expense report is much larger. Find the two entries that sum to 2020; what do you get if you multiply them together?
-
-To begin, get your puzzle input.
-
-# --- Part Two ---
-
-The Elves in accounting are thankful for your help; one of them even offers you a starfish coin they had left over from a past vacation. They offer you a second one if you can find three numbers in your expense report that meet the same criteria.
-
-Using the above example again, the three entries that sum to 2020 are 979, 366, and 675. Multiplying them together produces the answer, 241861950.
-
-In your expense report, what is the product of the three entries that sum to 2020?
+Now you can pass the find_sum function whatever total you want to find instead of *only* 2020, and you can tell it how many numbers you want to use to sum them up as the *depth* parameter.
