@@ -1,6 +1,3 @@
-from utils.input_to_list import input_to_list
-
-
 def parse_row(code):
     row_range = list(range(128))
     for char in code:

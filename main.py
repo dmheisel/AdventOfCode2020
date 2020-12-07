@@ -5,6 +5,7 @@ from Day2.Pass import Pass
 from Day3.toboggan_trajectory import calculate_trajectory
 from Day4.passport_validator import validate_all, parse_input
 from Day5.seat_parser import parse_row, parse_column, get_seat_ID, get_all_seats, get_missing_seat
+from Day6.customs_count import parse_input, count_group, count_all_groups
 # path = 'Day1\input.txt'
 # report_expenses('Day1\input.txt', 2020, 3)
 
@@ -23,9 +24,13 @@ from Day5.seat_parser import parse_row, parse_column, get_seat_ID, get_all_seats
 # valid = validate_all(path)
 # print(valid)
 
-path = 'Day5/input.txt'
-data = input_to_list(path, False)
-seats = get_all_seats(data)
-print(seats)
-missing = get_missing_seat(seats)
-print(missing)
+# path = 'Day5/input.txt'
+# data = input_to_list(path, False)
+# seats = get_all_seats(data)
+# print(seats)
+# missing = get_missing_seat(seats)
+# print(missing)
+
+path = 'Day6/input.txt'
+groups = parse_input(path)
+print(count_all_groups(groups))
