@@ -1,5 +1,6 @@
 from functools import reduce
 
+
 def parse_input(path):
     with open(path, "r") as f:
         groups = [x.split("\n") for x in f.read().split("\n\n")]
@@ -9,8 +10,8 @@ def parse_input(path):
 
 def count_group(group):
     total_yeses = set((letter for form in group for letter in form))
-    total_all_yeses = set((
-        letter for form in group for letter in form if all(letter in form for form in group)))
+    total_all_yeses = set(filter(lambda x: all(
+        x in form for form in group), total_yeses))
     return (len(total_yeses), len(total_all_yeses))
 
 
