@@ -7,7 +7,8 @@ from Day3.toboggan_trajectory import calculate_trajectory
 from Day4.passport_validator import validate_all, parse_input
 from Day5.seat_parser import parse_row, parse_column, get_seat_ID, get_all_seats, get_missing_seat
 from Day6.customs_count import parse_input, count_group, count_all_groups
-from Day7.bag_finder import parse_rules, find_containers, count_containing
+from Day7.bag_finder import parse_rules, find_containers
+from Day8.handheld_runner import parse_code, Handheld
 # path = 'Day1\input.txt'
 # report_expenses('Day1\input.txt', 2020, 3)
 
@@ -37,18 +38,23 @@ from Day7.bag_finder import parse_rules, find_containers, count_containing
 # groups = parse_input(path)
 # print(count_all_groups(groups))
 
-path = 'Day7/input.txt'
-rules = parse_rules(path)
+# path = 'Day7/input.txt'
+# rules = parse_rules(path)
 
-(contains, contained_in) = parse_rules(path)
-containers = find_containers('shiny gold', contained_in)
+# (contains, contained_in) = parse_rules(path)
+# containers = find_containers('shiny gold', contained_in)
 
-print(contains['dim lavender'])
-containing = count_containing('shiny gold', contains)
-print(containing)
-total = 0
-for bag in containing:
-    total += containing[bag]
-print(total)
-# total_possible_containers = len(containers)
-# print(total_possible_containers)
+# print(contains['dim lavender'])
+# containing = count_containing('shiny gold', contains)
+# print(containing)
+# total = 0
+# for bag in containing:
+#     total += containing[bag]
+# print(total)
+
+path = 'Day8/input.txt'
+instructions = parse_code(path)
+# print(instructions)
+handheld = Handheld(instructions)
+handheld.process_code(None)
+# handheld.debug_instructions()
