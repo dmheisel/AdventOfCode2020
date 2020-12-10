@@ -9,6 +9,7 @@ from Day5.seat_parser import parse_row, parse_column, get_seat_ID, get_all_seats
 from Day6.customs_count import parse_input, count_group, count_all_groups
 from Day7.bag_finder import parse_rules, find_containers
 from Day8.handheld_runner import parse_code, Handheld
+from Day9.xmas_encodiung import find_contiguous_set, find_invalid, solve
 # path = 'Day1\input.txt'
 # report_expenses('Day1\input.txt', 2020, 3)
 
@@ -52,9 +53,12 @@ from Day8.handheld_runner import parse_code, Handheld
 #     total += containing[bag]
 # print(total)
 
-path = 'Day8/input.txt'
-instructions = parse_code(path)
-# print(instructions)
-handheld = Handheld(instructions)
-handheld.process_code(None)
-# handheld.debug_instructions()
+# path = 'Day8/input.txt'
+# instructions = parse_code(path)
+# # print(instructions)
+# handheld = Handheld(instructions)
+# handheld.process_code(None)
+# # handheld.debug_instructions()
+
+path = 'Day9/input.txt'
+print(solve(path))
