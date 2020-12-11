@@ -10,6 +10,7 @@ from Day6.customs_count import parse_input, count_group, count_all_groups
 from Day7.bag_finder import parse_rules, find_containers
 from Day8.handheld_runner import parse_code, Handheld
 from Day9.xmas_encodiung import find_contiguous_set, find_invalid, solve
+from Day10.adaptor_calc import count_paths, find_adaptor_spread, build_paths
 # path = 'Day1\input.txt'
 # report_expenses('Day1\input.txt', 2020, 3)
 
@@ -60,5 +61,10 @@ from Day9.xmas_encodiung import find_contiguous_set, find_invalid, solve
 # handheld.process_code(None)
 # # handheld.debug_instructions()
 
-path = 'Day9/input.txt'
-print(solve(path))
+# path = 'Day9/input.txt'
+# print(solve(path))
+
+path = 'Day10/input.txt'
+path_grid = build_paths(path)
+print(path_grid)
+print(count_paths(path_grid))
