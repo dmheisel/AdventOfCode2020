@@ -7,7 +7,7 @@ test_boot_code = [('nop', 0), ('acc', 1), ('jmp', 4), ('acc', 3),
 
 class ParserTests(unittest.TestCase):
     def test_parse(self):
-        test_path = 'test/Day8/test_input.txt'
+        test_path = 'test/test_day8/test_input.txt'
         output = parse_code(test_path)
         self.assertListEqual(output, test_boot_code)
 
@@ -23,13 +23,6 @@ class HandheldTests(unittest.TestCase):
         self.assertEqual(self.handheld.boot_code, test_boot_code)
         self.assertEqual(self.handheld.accumulator, 0)
         self.assertEqual(self.handheld.pointer, 0)
-        self.assertListEqual(self.handheld.processed, list())
-
-    def test_handheld_check_pointer(self):
-        self.assertEqual(self.handheld.check_pointer(), True)
-        self.handheld.pointer = 3
-        self.handheld.processed.append(3)
-        self.assertEqual(self.handheld.check_pointer(), False)
 
     def test_jump(self):
         test_jump = ('jmp', 4)

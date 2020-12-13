@@ -11,6 +11,7 @@ from Day7.bag_finder import parse_rules, find_containers
 from Day8.handheld_runner import parse_code, Handheld
 from Day9.xmas_encodiung import find_contiguous_set, find_invalid, solve
 from Day10.adaptor_calc import count_paths, find_adaptor_spread, build_paths
+from Day12.Ship import Ship
 # path = 'Day1\input.txt'
 # report_expenses('Day1\input.txt', 2020, 3)
 
@@ -64,7 +65,18 @@ from Day10.adaptor_calc import count_paths, find_adaptor_spread, build_paths
 # path = 'Day9/input.txt'
 # print(solve(path))
 
-path = 'Day10/input.txt'
-path_grid = build_paths(path)
-print(path_grid)
-print(count_paths(path_grid))
+# path = 'Day10/input.txt'
+# path_grid = build_paths(path)
+# print(path_grid)
+# print(count_paths(path_grid))
+
+path = 'Day12/input.txt'
+ship = Ship(path)
+v1_result = ship.run_nav_code()
+ship.get_manhattan_distance()
+
+ship_v2 = Ship(path)
+v2_result = ship_v2.run_nav_code(2)
+v2_manhattan = ship_v2.get_manhattan_distance()
+
+print(f"Updated manhattan distance: {v2_manhattan}")
