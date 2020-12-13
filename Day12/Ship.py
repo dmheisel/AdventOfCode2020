@@ -40,11 +40,6 @@ class Ship:
         if target == "ship":
             # turn the ship's heading
             curr_heading = self.compass[self.heading]
-            N = 0
-            E = 90
-            S = 180
-            W = 270
-
             if dir == "L":
                 amt = -amt
             new_heading = next(
